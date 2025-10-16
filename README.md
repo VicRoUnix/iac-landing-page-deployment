@@ -36,8 +36,8 @@ Lanzar el entorno completo es tan sencillo como ejecutar un solo comando.
 
 1.  **Clona este repositorio:**
     ```bash
-    git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
-    cd tu-repositorio
+    git clone https://github.com/VicRoUnix/iac-landing-page-deployment.git
+    cd iac-landing-page-deployment
     ```
 
 2.  **Levanta la máquina virtual:**
@@ -47,14 +47,14 @@ Lanzar el entorno completo es tan sencillo como ejecutar un solo comando.
     Este comando leerá el `Vagrantfile`, creará una nueva máquina virtual, la encenderá y ejecutará automáticamente el playbook de Ansible (`playbook.yml`) para provisionarla.
 
 3.  **¡Y listo! Accede a tu Landing Page:**
-    Una vez que el proceso finalice, abre tu navegador web y visita la dirección IP privada configurada en el `Vagrantfile` (por defecto suele ser `http://192.168.33.10`). Deberías ver la landing page funcionando.
+    Una vez que el proceso finalice, abre tu navegador web y visita la dirección IP privada configurada en el `Vagrantfile` (por defecto  sera `http://192.168.56.150`). Deberías ver la landing page funcionando.
 
 ---
 
 ## 📁 Estructura del Proyecto
 
+```
 iac-landing-page-deployment
-.
 ├── .gitignore
 ├── Vagrantfile
 ├── playbook.yml
@@ -78,7 +78,7 @@ iac-landing-page-deployment
     └── firewall/
         └── tasks/
             └── main.yml
-
+```
 ---
 
 ## 🔧 Personalización
