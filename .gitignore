@@ -1,0 +1,27 @@
+# ## Vagrant ##
+# Directorio que contiene los datos específicos de la máquina virtual (logs, estado, etc.)
+.vagrant/
+
+# ## Ansible ##
+# Ficheros de reintento generados cuando un playbook falla
+*.retry
+
+# Ficheros de backup creados por módulos como lineinfile o template
+*.bak
+*~
+
+# Ficheros de Ansible Vault que contienen secretos.
+# ¡MUY IMPORTANTE! Nunca subas tus secretos a un repositorio público.
+# Es mejor renombrar tu fichero a algo como `secret.yml` para que coincida.
+*secret.yml
+vault.yml
+
+# ## IDE / Editor de texto ##
+# Configuraciones específicas del editor (ej. VSCode, JetBrains)
+.vscode/
+.idea/
+
+# ## Sistema Operativo ##
+# Ficheros específicos de macOS y Windows
+.DS_Store
+Thumbs.db

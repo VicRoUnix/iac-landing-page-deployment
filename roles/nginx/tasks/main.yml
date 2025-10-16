@@ -1,0 +1,33 @@
+---
+- name: Instalar Nginx y dependencias
+  apt:
+    name: ["nginx"]
+    state: present
+    update_cache: yes
+
+- name: Mandar Landing page al directorio web
+  ansible.builtin.copy:
+    src: landing_page/
+    dest: "{{ web_page }}"
+    owner: www-data
+    group: www-data
+    mode: '0755'
+
+- name: Configurar Nginx
+  ansible.builtin.copy:
+    src: nginx.conf
+    dest: /etc/nginx/sites-available/landing_page
+  notify: Restart Nginx
+
+- name: Habilitar site Nginx
+  ansible.builtin.file:
+    src: /etc/nginx/sites-available/landing_page
+    dest: /etc/nginx/sites-enabled/landing_page
+    state: link
+
+
+- name: Deshabilitar sitio por defecto de Nginx
+  ansible.builtin.file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  notify: Restart Nginx

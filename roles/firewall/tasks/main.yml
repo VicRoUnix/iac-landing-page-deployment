@@ -1,0 +1,6 @@
+---
+- name: Habilitar reglas de Firewall
+  ufw:
+    rule: allow
+    port: "22,80,443"
+    proto: tcp

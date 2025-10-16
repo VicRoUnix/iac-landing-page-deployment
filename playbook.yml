@@ -1,0 +1,12 @@
+---
+- name: Lanzar Landing Page
+  hosts: vagrantpage
+  become: true
+
+  vars:
+    web_page: "/var/www/landing_page"
+
+  roles:
+  - nginx
+  - devops
+  - firewall

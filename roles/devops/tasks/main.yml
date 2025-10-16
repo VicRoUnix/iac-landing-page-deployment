@@ -1,0 +1,7 @@
+---
+- name: Crear usuario para la Landing page
+  ansible.builtin.user:
+    name: devops
+    groups: sudo
+    append: yes
+    password: "{{ '12345' | password_hash('sha512') }}"
