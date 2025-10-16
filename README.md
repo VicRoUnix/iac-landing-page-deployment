@@ -16,7 +16,7 @@ El objetivo es tener un entorno de desarrollo y pruebas reproducible con un solo
 * **VirtualBox**: Como proveedor de virtualización por defecto para Vagrant.
 * **Ansible**: Para automatizar la instalación y configuración del software en la máquina virtual (servidor web, firewall, etc.).
 * **Nginx**: Como servidor web para servir la landing page.
-* **Ubuntu 22.04**: Como sistema operativo base en la máquina virtual.
+* **Ubuntu 24.04**: Como sistema operativo base en la máquina virtual.
 
 ---
 
